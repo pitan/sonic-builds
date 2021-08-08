@@ -36,7 +36,7 @@ do
 	echo "  \"build\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BRCM}&view=results\","
 	echo "  \"date\": \"${BUILD_BRCM_TS}\""
 	echo " },"
-	echo "\"sonic-mellanox.swi\": {"
+	echo "\"sonic-mellanox.bin\": {"
 	echo "  \"url\": \"$(echo "${ARTF_MLNX}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-mellanox.bin/')\","
 	echo "  \"build\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_MLNX}&view=results\","
 	echo "  \"date\": \"${BUILD_MLNX_TS}\""
