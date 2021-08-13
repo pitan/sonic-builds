@@ -51,6 +51,9 @@ An unofficial automatic index of the latest SONiC installation images.
 <div class="px-4 text-center">
 <div class="col-lg-6 mx-auto">
 <p class="lead mt-4">
+Want to use SONiC in GNS3? Try <a href="download-gns3a.sh">this download script</a>.
+</p>
+<p class="mt-4">
 Contact: <a href="https://github.com/bluecmd/sonic-builds">GitHub</a>
 </p>
 <i>SONiC and the SONiC logo are trademarks of the Microsoft group of companies</i>
@@ -69,7 +72,7 @@ fetch('builds.json')
 		    let ta = timeAgo(out[key][file]['date']);
 		    content += '<div class="d-flex gap-2 w-100 justify-content-between">';
 		    content += '<div>';
-		    content += '<li><a href="' + out[key][file]['url'] + '">' + file + '</a></li></div><span class="opacity-25 text-nowrap"><a href="' + out[key][file]['build'] + '">' + ta + '</a></span>'
+		    content += '<li><a href="' + out[key][file]['url'] + '">' + file + '</a></li></div><span class="opacity-25 text-nowrap"><a href="' + out[key][file]['build-url'] + '">' + ta + '</a></span>'
 		    content += '</div>';
 	    }
 	    d.innerHTML += `
