@@ -68,6 +68,9 @@ fetch('builds.json')
 	 let d = document.getElementById('builds');
 	 for (var key in out) {
 	    content = ''
+	    if (Object.keys(out[key]).length == 0) {
+		    content += '<div class="opacity-25"><i>No known successful builds</i></div>'
+	    }
 	    for (var file in out[key]) {
 		    let ta = timeAgo(out[key][file]['date']);
 		    content += '<div class="d-flex gap-2 w-100 justify-content-between">';
