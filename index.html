@@ -49,10 +49,19 @@ An unofficial automatic index of the latest SONiC installation images.
 <div class="list-group" id="builds">
 </div>
 <div class="px-4 text-center">
-<div class="col-lg-6 mx-auto">
+<div class="col-lg-6 mx-auto"
 <p class="lead mt-4">
 Want to use SONiC in GNS3? Try <a href="download-gns3a.sh">this download script</a>.
 </p>
+<div style="text-align: left">
+<code style="display: table; margin: 0 auto;">
+# How-to: sonic-vs in QEMU<br />
+qemu-system-x86_64 -machine q35 -m 2048 -hda sonic-vs.img \<br />
+&nbsp;&nbsp;-nographic -netdev user,id=sonic0,hostfwd=tcp::5555-:22 \<br />
+&nbsp;&nbsp;-device e1000,netdev=sonic0<br />
+# Access using "ssh localhost -p 5555"
+</code>
+</div>
 <p class="mt-4">
 Contact: <a href="https://github.com/bluecmd/sonic-builds">GitHub</a>
 </p>
