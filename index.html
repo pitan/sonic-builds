@@ -56,7 +56,7 @@ Want to use SONiC in GNS3? Try <a href="download-gns3a.sh">this download script<
 <div style="text-align: left">
 <code style="display: table; margin: 0 auto;">
 # How-to: sonic-vs in QEMU<br />
-qemu-system-x86_64 -machine q35 -m 2048 -hda sonic-vs.img \<br />
+qemu-system-x86_64 -machine q35 -m 2048 -smp 4 -hda sonic-vs.img \<br />
 &nbsp;&nbsp;-nographic -netdev user,id=sonic0,hostfwd=tcp::5555-:22 \<br />
 &nbsp;&nbsp;-device e1000,netdev=sonic0<br />
 # Access using "ssh localhost -p 5555"
