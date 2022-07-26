@@ -20,8 +20,15 @@ if [[ ! -f "${IMGFILE}" ]]; then
 fi
 
 echo "Calculating checksum ..."
+
+if [ "$(uname)" == "Darwin" ]; then
+MD5SUMIMGFILE="$(md5 -q "${IMGFILE}")"
+LENIMGFILE="$(stat -f %z "${IMGFILE}")"
+else
 MD5SUMIMGFILE="$(md5sum "${IMGFILE}" | awk '{print $1}')"
 LENIMGFILE="$(stat -c %s "${IMGFILE}")"
+fi
+
 GNS3APPNAME="SONiC-${BRANCH}-${BUILD}.gns3a"
 
 echo "
