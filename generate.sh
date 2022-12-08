@@ -9,7 +9,7 @@ DEFID_VS="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions
 
 echo '{'
 first=1
-for BRANCH in 202012 202106 202111 202205 master
+for BRANCH in 202012 202106 202111 202205 202211 master
 do
 	if [[ -z "${first}" ]]; then
 		echo ','
