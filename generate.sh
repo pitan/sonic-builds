@@ -105,6 +105,12 @@ do
 		echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_VS}&view=results\","
 		echo "  \"build\": \"${BUILD_VS}\","
 		echo "  \"date\": \"${BUILD_VS_TS}\""
+		echo " },"
+		echo "\"docker-sonic-vs.gz\": {"
+		echo "  \"url\": \"$(echo "${ARTF_VS}" | sed 's/format=zip/format=file\&subpath=\/target\/docker-sonic-vs.gz/')\","
+		echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_VS}&view=results\","
+		echo "  \"build\": \"${BUILD_VS}\","
+		echo "  \"date\": \"${BUILD_VS_TS}\""
 		echo " }"
 	fi
 	echo "}"
